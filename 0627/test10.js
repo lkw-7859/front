@@ -1,19 +1,22 @@
-// get, set을 통한 속성 접근 관리
-// let user = {};
-// Object.defineProperty(user,"_age",{
-//     get:function(){
-//         return this._age;
-//     },
-//     set:function(age){
-//         if(age < 0){
-//             this._age=age;
-//         }
-//     },
-//     enumerable : true
-// });
-// user._age=10;
-// console.log(user._age);
-// user._age=-1;
+//get, set을 통한 속성 접근 관리
+let user = {};
+Object.defineProperty(user,"age",{
+    get:function(){
+        return this._age;
+    },
+    set:function(age){
+        if(age < 0){
+            console.log("0보자 작은값을 올 수 없습니다.");
+        }
+        else{
+            this._age=age;
+        }
+    },
+    enumerable : true
+});
+user.age=10;
+console.log(user.age);
+user.age=-1;
 
 let user2 = {
     get name(){
@@ -28,4 +31,4 @@ let user2 = {
 }
 user2.name='harin';
 console.log(user2.name);
-user2.name('ha');
+user2.name='hari';

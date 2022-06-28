@@ -7,3 +7,15 @@ const teacherJay={
     }
 }
 
+const studentBbo = {
+    name:'뽀',
+    age:20,
+    exp:0,
+    gainExp:function(){
+        this.exp++;
+    }
+}
+
+console.log(studentBbo.exp);
+teacherJay.teachJavaScript(studentBbo);
+console.log(studentBbo.exp);
